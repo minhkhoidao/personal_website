@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "format": "npx prettier . --write",
-    "prepare": "husky",
+    "prepare": "husky install",
     "lint-staged": "npx lint-staged"
   },
   "dependencies": {
