@@ -12,7 +12,7 @@ const config: Config = {
       link: '#5690AF',
       bg: '#EEEEEE',
       accent: '#D26878',
-      text: '#646868',
+      text: '#41474E',
     },
     fontSize: {
       sm: ['14px', '20px'],
