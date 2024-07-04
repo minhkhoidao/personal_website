@@ -51,6 +51,13 @@ main {
   width: 100%;
 }
 
+#statuscafe:focus,
+#statuscafe:hover {
+  transform: scale(1.05);
+  transition: 0.2s all;
+  background: var(--bg);
+}
+
 blockquote {
   margin: 0 0 0 1.25rem;
   padding: 0.5rem 0 0 0.5rem;
@@ -74,4 +81,24 @@ blockquote {
   margin: 0;
   border: none;
   border-radius: 0;
+}
+
+ul.list-hobby {
+  list-style: none;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+ul.list-hobby li {
+  margin-bottom: 0.125rem;
+}
+
+ul.list-hobby li::marker {
+  content: '» ';
+  color: #d26878;
+}
+
+ul.list-hobby li:hover::marker {
+  content: '# ';
+  color: #5690af;
 }
