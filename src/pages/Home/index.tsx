@@ -1,5 +1,7 @@
 import LastestStatus from '@/containers/LastestStatus';
 import More from '@/containers/More';
+import OnlinePresence from '@/containers/OnlinePresence';
+import Teams from '@/containers/Teams';
 import Image from 'next/image';
 
 const Home = () => {
@@ -17,6 +19,8 @@ const Home = () => {
       </div>
       <LastestStatus />
       <More />
+      <OnlinePresence />
+      <Teams />
     </div>
   );
 };
