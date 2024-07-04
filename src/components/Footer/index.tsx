@@ -1,9 +1,25 @@
 import { RssIcon } from '@/icons';
+import Image from 'next/image';
 import Link from 'next/link';
 import CustomLink from '../Link';
-import Image from 'next/image';
 
-const Footer = () => {
+async function fetchImages() {
+  try {
+    const response = await fetch('https://speyllsite.pages.dev/moe.json', {
+      next: { revalidate: 3600 },
+    });
+    const data = await response.json();
+    const randomIndex = Math.floor(Math.random() * data.urls.length);
+    const randomUrl = data.urls[randomIndex];
+    return randomUrl;
+  } catch (error) {
+    console.error('Error fetching URLs:', error);
+  }
+}
+
+export default async function Footer() {
+  const image = await fetchImages();
+
   return (
     <footer>
       <hr className='border border-accent border-dashed my-2' />
@@ -39,10 +55,9 @@ const Footer = () => {
         loading='lazy'
         width={180}
         height={139}
-        src='https://i.ibb.co/3ptYG1c/14.gif'
+        src={image}
+        unoptimized
       />
     </footer>
   );
-};
-
-export default Footer;
+}
