@@ -14,7 +14,7 @@
   "dependencies": {
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
-    "next": "14.2.3",
+    "next": "14.2.25",
     "react": "^18",
     "react-dom": "^18"
   },
